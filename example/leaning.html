@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my first vue</title>
+</head>
+<body>
+
+
+
+<div id="app">{{message}}</div>
+
+<div id="app-2">
+    <span v-bind:title="message">
+         鼠标悬停几秒钟查看此处动态绑定的提示信息！
+    </span>
+</div>
+
+<div id="app-3">
+    <p v-if="seen">hello world ！</p>
+</div>
+
+<!--<div id="app-4">-->
+    <!--<ol>-->
+        <!--<li v-for="todo in todos">{{todo.test}}</li>-->
+    <!--</ol>-->
+<!--</div>-->
+<div id="app-4">
+    <ul>
+        <li v-for="(x,y) in todos">{{y}} : {{x}}</li>
+    </ul>
+    <span>x , y 顺序反了</span>
+</div>
+
+<div id="app-5">
+    <p>{{message}}</p>
+    <button v-on:click="reverseMessage">逆转信息</button>
+</div>
+
+
+<div id="app-6">
+<p>{{message}}</p>
+    <input type="text" v-model="message">
+</div>
+
+<div id="app-7">
+    <ul >
+        <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
+
+        </todo-item>
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+<script src="script/hello.world.js"></script>
+</body>
+</html>
